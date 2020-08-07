@@ -1,5 +1,7 @@
 const { app } = require("electron");
 
+const addItem = require('./shop-functionalities/addItem');
+
 module.exports = mainMenu = [
     {
         label: 'File',
