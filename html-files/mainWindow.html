@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <div>
+        <h1>Shopping List</h1>
+        <ul></ul>
+    </div>
+    <script>
+        const ipcRenderer = require('electron').ipcRenderer;
+        let ul = document.getElementsByTagName('ul')[0];
+
+        ipcRenderer.on('newItem', function(e, newItem) {
+            let li = document.createElement('li');
+            li.append(newItem);
+            ul.append(li);
+        });
+    </script>
 </body>
 </html>
