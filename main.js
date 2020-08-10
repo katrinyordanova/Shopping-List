@@ -1,5 +1,5 @@
 const electron = require('electron');
-const { app, BrowserWindow, Menu } = electron;
+const { app, BrowserWindow, Menu, ipcMain } = electron;
 const path = require('path');
 const url = require('url');
 const mainWindowMenu = require('./mainWindowMenu');
@@ -21,6 +21,10 @@ app.on('ready', function(){
     }));
     const mainMenu = Menu.buildFromTemplate(mainWindowMenu);
     Menu.setApplicationMenu(mainMenu);
+});
+
+ipcMain.on('newItem', function(e, newItem){
+    mainWindow.webContents.send('newItem', newItem);
 });
 
 process.env.NODE_ENV !== 'production' ? mainWindowMenu.push(devTools) : null;
