@@ -1,5 +1,5 @@
 const { app } = require('electron');
-const addItem = require('./shop-functionalities/addItemWindow');
+const addItem = require('./addItemWindow');
 
 module.exports = mainMenu = [
     {
