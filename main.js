@@ -19,6 +19,7 @@ app.on('ready', function(){
         file: 'file:',
         slashes: true
     }));
+    mainWindow.on('closed', function(){ app.quit(); });
     const mainMenu = Menu.buildFromTemplate(mainWindowMenu);
     Menu.setApplicationMenu(mainMenu);
 });
