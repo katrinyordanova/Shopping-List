@@ -13,14 +13,12 @@
     </div>
     <script>
         const ipcRenderer = require('electron').ipcRenderer;
-
         const addButton = document.getElementsByTagName('button')[0];
         addButton.addEventListener('click', submitForm);
 
         function submitForm() {
             const newItem = document.getElementsByTagName('input')[0].value;
-            console.log(newItem);
-            ipcRenderer.send('newItem', newItem);
+            newItem !== '' ? ipcRenderer.send('newItem', newItem) : null;
         }
     </script>
 </body>
