@@ -20,6 +20,8 @@ module.exports = function addItem() {
         file: 'file:',
         slashes: true
     }));
+
+    addItemWindow.on('close', function() { addItemWindow = null; });
 }
 
     
