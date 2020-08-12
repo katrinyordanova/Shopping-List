@@ -12,16 +12,16 @@ html {
     margin-bottom: .8em;
     font-size: 1.3em;
     color: rgb(235, 235, 235);
-    border-right: 2px solid rgba(104, 32, 238, 0.486);
-    border-left: 2px solid rgb(205, 181, 250);
+    border-left: 2px solid #6820EE;
+    border-right: 2px solid #CDB5FA;
     width: auto;
 }
 
 .add-item-form__add-item-input {
     border: none;    
     border-radius: .5em;
-    color: rgb(68, 81, 87);
-    box-shadow: 0px 0px 5px 0px rgba(82, 82, 82, 0.15);
+    color: #445157;
+    box-shadow: 0px 0px 5px 0px #525252;
     font-size: 1.2em;
     width: 10em;
     outline: none;
@@ -36,7 +36,7 @@ html {
     margin-top: .7em;
     font-size: 1.3em;
     border: none;
-    color: white;
+    color: #FFFFFF;
 }
 
 .add-item-form__add-item-button > i:hover {
