@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
 </head>
 <body>
     <div>
@@ -13,10 +14,20 @@
         const ipcRenderer = require('electron').ipcRenderer;
         let ul = document.getElementsByTagName('ul')[0];
 
+        ul.addEventListener('dblclick', deleteItem);
+
+        function deleteItem(e) {
+            event.target.remove() = '';
+        }
+
         ipcRenderer.on('newItem', function(e, newItem) {
-            let li = document.createElement('li');
-            li.append(newItem);
-            ul.append(li);
+            let listItems = document.createElement('li');
+            listItems.append(newItem);
+            // const newItemDeleteButton = document.createElement('button');
+            // newItemDeleteButton.innerHTML = '<i class="fa fa-times"></i>';
+            // newItemDeleteButton.addEventListener('click', deleteItem(e));
+            // li.append(newItemDeleteButton);
+            ul.append(listItems);
         });
     </script>
 </body>
