@@ -11,15 +11,15 @@ html {
 .main-window__header {
     margin: .7em auto .7em auto;
     font-size: 2em;
-    color: white;
+    color: #FFFFFF;
     letter-spacing: 1px;
-    border-left: 2px solid rgba(104, 32, 238, 0.486);
-    border-right: 2px solid rgb(205, 181, 250);
+    border-left: 2px solid #6820EE;
+    border-right: 2px solid #CDB5FA;
     width: 8em;
 }
 
 .main-window__list__li {
     font-size: 1.5em;
-    color: rgb(235, 235, 235);
+    color: #EBEBEB;
     list-style-type: none;
 }
