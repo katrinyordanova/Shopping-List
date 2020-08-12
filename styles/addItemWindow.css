@@ -1,0 +1,44 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to left, #a8c0ff, #3f2b96);
+}
+
+.add-item-form {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.add-item-form__paragraph {
+    margin-bottom: .8em;
+    font-size: 1.3em;
+    color: rgb(235, 235, 235);
+    border-right: 2px solid rgba(104, 32, 238, 0.486);
+    border-left: 2px solid rgb(205, 181, 250);
+    width: auto;
+}
+
+.add-item-form__add-item-input {
+    border: none;    
+    border-radius: .5em;
+    color: rgb(68, 81, 87);
+    box-shadow: 0px 0px 5px 0px rgba(82, 82, 82, 0.15);
+    font-size: 1.2em;
+    width: 10em;
+    outline: none;
+    padding: .15em 0 .15em .5em;
+}
+
+.add-item-form__add-item-button {
+    border: none;
+}
+
+.add-item-form__add-item-button > i {
+    margin-top: .7em;
+    font-size: 1.3em;
+    border: none;
+    color: white;
+}
+
+.add-item-form__add-item-button > i:hover {
+    cursor: pointer;
+}
