@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/mainWindow.css">
 </head>
 <body>
-    <div>
-        <h1>Shopping List</h1>
-        <ul></ul>
+    <div class="main-window">
+        <h1 class="main-window__header">Shopping List</h1>
+        <ul class="main-window__list"></ul>
     </div>
     <script>
         const ipcRenderer = require('electron').ipcRenderer;
@@ -22,11 +23,9 @@
 
         ipcRenderer.on('newItem', function(e, newItem) {
             let listItems = document.createElement('li');
+            listItems.className = 'main-window__list__li';
+            listItems.innerHTML = '<i class="fa fa-shopping-cart"></i> ';
             listItems.append(newItem);
-            // const newItemDeleteButton = document.createElement('button');
-            // newItemDeleteButton.innerHTML = '<i class="fa fa-times"></i>';
-            // newItemDeleteButton.addEventListener('click', deleteItem(e));
-            // li.append(newItemDeleteButton);
             ul.append(listItems);
         });
     </script>
