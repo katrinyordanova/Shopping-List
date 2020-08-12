@@ -3,6 +3,13 @@ html {
     background: linear-gradient(to left, #a8c0ff, #3f2b96);
 }
 
+.add-item-form__paragraph,
+.add-item-form__add-item-button,
+.add-item-form__add-item-input,
+.add-item-form__add-item-button > i {
+    border: none;
+}
+
 .add-item-form {
     margin-top: 2em;
     text-align: center;
@@ -11,32 +18,26 @@ html {
 .add-item-form__paragraph {
     margin-bottom: .8em;
     font-size: 1.3em;
-    color: rgb(235, 235, 235);
-    border-left: 2px solid #6820EE;
-    border-right: 2px solid #CDB5FA;
+    color: #EBEBEB;
+    border-right: 2px solid #6820EE;
+    border-left: 2px solid #CDB5FA;
     width: auto;
 }
 
 .add-item-form__add-item-input {
-    border: none;    
     border-radius: .5em;
     color: #445157;
-    box-shadow: 0px 0px 5px 0px #525252;
+    box-shadow: 0px 0px 5px 0px #6d6d6d;
     font-size: 1.2em;
     width: 10em;
     outline: none;
     padding: .15em 0 .15em .5em;
 }
 
-.add-item-form__add-item-button {
-    border: none;
-}
-
 .add-item-form__add-item-button > i {
     margin-top: .7em;
     font-size: 1.3em;
-    border: none;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .add-item-form__add-item-button > i:hover {
