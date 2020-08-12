@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/addItemWindow.css">
 </head>
 <body>
     <div>
-        <form>
-            <input type="text" autofocus>
-            <button><i class="fa fa-plus"></i></button>
+        <form class="add-item-form">
+            <div>
+                <p class="add-item-form__paragraph">Add new product</p>
+                <input class="add-item-form__add-item-input" type="text">
+            </div>
+            <a class="add-item-form__add-item-button"><i class="fa fa-plus"></i></a>
         </form>
     </div>
     <script>
         const ipcRenderer = require('electron').ipcRenderer;
-        const addButton = document.getElementsByTagName('button')[0];
+        const addButton = document.getElementsByTagName('a')[0];
         addButton.addEventListener('click', submitForm);
 
         function submitForm() {
